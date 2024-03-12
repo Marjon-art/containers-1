@@ -1,17 +1,15 @@
 class Team {
-  consructor() {
+  constructor() {
     this.members = new Set();
   }
-  add() {
+  add(character) {
     if(this.members.has(character)){
       throw new Error("такой персонаж уже существует");
     } 
     this.members.add(character);
   };
-addAll(...args){ 
-  for(let i = 0; i < args.length; i++) {
-    this.members.add(args[i]);
-  }
+addAll(character){ 
+    this.members.add(character);
 };
   toArray(){
     const arr = Array.from(this.members);
