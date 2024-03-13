@@ -1,4 +1,4 @@
-export class Team {
+ export class Team {
   constructor() {
     this.members = new Set();
   }
@@ -8,8 +8,9 @@ export class Team {
     } 
     this.members.add(character);
   };
-addAll(character){ 
-    this.members.add(character);
+addAll(...character){ 
+  for(let i = 0; i <character.length; i++)
+    this.members.add(character[i]);
 };
   toArray(){
     const arr = Array.from(this.members);
